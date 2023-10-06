@@ -6,5 +6,6 @@ sudo docker run -it --rm \
 -v /dev/video0:/dev/video0:rw \
 -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
 -e DISPLAY=$DISPLAY \
+--network="host" \
 --privileged \
 bytetrack:latest bash
