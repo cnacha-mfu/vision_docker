@@ -13,8 +13,12 @@ from supervision.geometry.dataclasses import Point
 
 SCALE = 1
 
-# load web cam
-cap = cv2.VideoCapture(0)
+# load from web cam
+# cap = cv2.VideoCapture(0)
+
+# load from vlc stream
+cap = cv2.VideoCapture("http://127.0.0.1:8082/stream.wmv")
+
 cap.set(3, 1400)
 cap.set(4, 1050)
 
